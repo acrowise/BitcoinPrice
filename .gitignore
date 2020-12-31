@@ -8,3 +8,4 @@
 /StatisticalAnalysis/src/test/
 /StatisticalAnalysis/target/
 /ETL/target/
+/ETL/src/main/scala/com/ngt/etl/test/

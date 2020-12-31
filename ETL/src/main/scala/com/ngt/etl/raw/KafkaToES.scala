@@ -2,7 +2,6 @@ package com.ngt.etl.raw
 
 
 import org.apache.flink.api.common.functions.RuntimeContext
-import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.connectors.elasticsearch.{ElasticsearchSinkFunction, RequestIndexer}
 import org.apache.flink.streaming.connectors.elasticsearch7.ElasticsearchSink
@@ -22,7 +21,7 @@ import java.util.Properties
 case class CSVToES_Bitcoin(timestamp: Long, openPrice: String, highPrice: String, lowPrice: String, closePrice: String,
                            currencyBTC: String, currencyValue: String, weightedPrice: String)
 
-object CSVToES {
+object KafkaToES {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(8)
@@ -36,7 +35,7 @@ object CSVToES {
     val inputStream: DataStream[String] =
       env.addSource(new FlinkKafkaConsumer011[String](java.util.regex.Pattern.compile("bitcoin-source[0-9]"), new SimpleStringSchema(), properties))
 
-
+    //    val inputStream: DataStream[String] = env.readTextFile("data/bitcoin.csv")
     val dataStream: DataStream[CSVToES_Bitcoin] = inputStream
       .filter(data => {
         !data.contains("NaN") && !data.contains("Timestamp")
@@ -49,9 +48,9 @@ object CSVToES {
 
 
     val httpHosts = new java.util.ArrayList[HttpHost]
-//    httpHosts.add(new HttpHost("192.168.100.102", 9200, "http"))
-//    httpHosts.add(new HttpHost("192.168.100.103", 9200, "http"))
-//    httpHosts.add(new HttpHost("192.168.100.104", 9200, "http"))
+    //    httpHosts.add(new HttpHost("192.168.100.102", 9200, "http"))
+    //    httpHosts.add(new HttpHost("192.168.100.103", 9200, "http"))
+    //    httpHosts.add(new HttpHost("192.168.100.104", 9200, "http"))
 
     httpHosts.add(new HttpHost("192.168.31.20", 9200, "http"))
 
@@ -70,16 +69,16 @@ object CSVToES {
 
         // 创建一个index request
         val indexRequest = Requests.indexRequest()
+          // ES 中 索引名字注意不能使用大写字母
           .index("bitcoin")
-          .`type`("readingdata")
+          //          .`type`("readingdata")
           .source(dataSource)
 
         indexer.add(indexRequest)
-        //        println(element)
       }
     }
     dataStream.addSink(new ElasticsearchSink.Builder[CSVToES_Bitcoin](httpHosts, esSinkFunc).build())
-    env.execute("CSVToES")
+    env.execute("KafkaToES")
   }
 }
 
