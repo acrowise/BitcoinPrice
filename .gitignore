@@ -6,3 +6,5 @@
 /Bitcoin.iml
 /ETL/src/test/
 /StatisticalAnalysis/src/test/
+/StatisticalAnalysis/target/
+/ETL/target/
