@@ -1,10 +1,10 @@
 package com.ngt.etl.raw
 
-import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.core.fs.Path
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011
 
+import java.io.File
 import java.util.Properties
 
 /**
@@ -22,11 +22,12 @@ object DataCleansingToCSV {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)
 
+    //    val inputStream: DataStream[String] = env.readTextFile("data/bitstampUSD.csv")
+
     val properties: Properties = new Properties()
     properties.setProperty("bootstrap.servers", "hadoop102:9092,hadoop103:9092,hadoop104:9092")
     properties.setProperty("group.id", "bitcoin")
     properties.setProperty("flink.partition-discovery.interval-millis", "1000")
-
 
     // 使用通配符 同时匹配多个 Kafka主题
     val inputStream: DataStream[String] =
@@ -41,7 +42,12 @@ object DataCleansingToCSV {
         File2CSV_Bitcoin(arr(0).toLong * 1000L, arr(1), arr(2), arr(3), arr(4), arr(5), arr(6), arr(7))
       })
 
-    dataStream.writeAsCsv("data/bitcoin.csv")
+    val filePath = "data/bitcoin.csv"
+    val file = new File(filePath)
+    if (file.exists()) {
+      file.delete()
+    }
+    dataStream.writeAsCsv(filePath)
     env.execute("DataCleansingToCSV")
   }
 }
