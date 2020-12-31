@@ -1,5 +1,7 @@
 # BitcoinPrice 比特币大数据价格分析系统
 
+![52e920006bb3f7392d33b5db](image/logo.png)
+
 ## 1 项目背景
 
 ### 1.1 比特币简介
@@ -109,18 +111,18 @@
 
 **数据处理、可视化及实时计算部分**
 
-|     软件      |                   版本                    |                作用                |
-| :-----------: | :---------------------------------------: | :--------------------------------: |
-|     Java      | Oracle JDK 1.8.0.-271 / Oracle JDK 11.0.9 |         所有框架的底层服务         |
-|     Scala     |                  2.12.12                  | 本项目主要是Flink的Scala API来实现 |
-|     Flink     |            Apache Flink 1.11.2            |           数据清洗和计算           |
-|     Kafka     |            Apache Kafka 2.4.1             |              数据通道              |
-|     Redis     |                   5.0.5                   |          提供快速读取服务          |
-|   Zookeeper   |               Apache 3.5.7                |           管理Kafka集群            |
-|    Hadoop     |            Apache Hadoop 3.1.3            |           提供分布式存储           |
-|     MySQL     |                  5.7.30                   |            提供数据存储            |
-| Elasticsearch |                   7.8.0                   |       提供快速分布式查询服务       |
-|    Kibana     |                   7.8.0                   |    在ES查询基础上提供数据可视化    |
+|     软件      |                   版本                    |                     作用                      |
+| :-----------: | :---------------------------------------: | :-------------------------------------------: |
+|     Java      | Oracle JDK 1.8.0.-271 / Oracle JDK 11.0.9 |              所有框架的底层服务               |
+|     Scala     |                  2.12.12                  |      本项目主要是Flink的Scala API来实现       |
+|     Flink     |            Apache Flink 1.11.2            |                数据清洗和计算                 |
+|     Kafka     |            Apache Kafka 2.4.1             |                   数据通道                    |
+|     Redis     |                   5.0.5                   |               提供快速读取服务                |
+|   Zookeeper   |               Apache 3.5.7                |                 管理Kafka集群                 |
+|    Hadoop     |            Apache Hadoop 3.1.3            |                提供分布式存储                 |
+|     MySQL     |                  5.7.30                   |                 提供数据存储                  |
+| Elasticsearch |                   7.8.0                   | 提供快速分布式查询服务，使用Oracle JDK 11.0.9 |
+|    Kibana     |                   7.8.0                   |     提供数据可视化，使用Oracle JDK 11.0.9     |
 
 **价格预测模型部分**
 
