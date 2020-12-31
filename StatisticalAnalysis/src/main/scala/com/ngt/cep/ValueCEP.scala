@@ -87,7 +87,6 @@ class priceEventMatch() extends PatternSelectFunction[ValueCEPBitcoin, ResultBit
       count += 1
     }
 
-
     ResultBitcoin(map.get("begin").get(0), ValueCEPBitcoin("t", endTime, endCurrencyBTC, endCurrencyValue, endPrice), count)
   }
 }
