@@ -612,7 +612,7 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 - [x] 使用 Flink 扩展拆分时间字段，实现一小时、一天、一周以及一月的价格和交易量走势可视化
 - [x] Flink 流式实时分析价格、交易量及交易额走势
 - [ ] 使用 Flink 实现更丰富的实时计算
-- [ ] 使用 LSTM 实现价格走势预测
+- [ ] 使用 LSTM 和 ARIMA 实现价格走势预测
 - [ ] 通过数据分析构建一套投资策略
 
 
