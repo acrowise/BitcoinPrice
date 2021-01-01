@@ -9,3 +9,5 @@
 /StatisticalAnalysis/target/
 /ETL/target/
 /ETL/src/main/scala/com/ngt/etl/test/
+/Real-timeAnalysis/target/
+/Real-timeAnalysis/src/test/
