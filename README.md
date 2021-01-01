@@ -131,17 +131,13 @@
 |   python   |  3.7  |         |
 |    CUDA    | 10.1  |         |
 |   cuDNN    | 7.6.5 |         |
-| TensorFlow | 2.1.0 | GPU支持 |
+| TensorFlow | 2.2.0 | GPU支持 |
 |  PyTorch   | 1.6.0 | GPU支持 |
-
-> 价格预测只完成预研，目前已经完成模型选择和数据维度扩展工作。
 
 ### 3.3 数据集清洗
 
 1. 首先清洗掉数据集中的无效数据，最终得到有效数据 **3330541** 条
 2. 由于数据集中的 **OHLC**  4个值存在部分错误，因此删除这些字段不再使用
-
-
 
 ## 4 Kibana数据可视化步骤
 
@@ -615,8 +611,8 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 - [x] 存入 Elasticsearch，使用全文检索实现实时搜索，kibana 可视化展示
 - [x] 使用 Flink 扩展拆分时间字段，实现一小时、一天、一周以及一月的价格和交易量走势可视化
 - [x] Flink 流式实时分析价格、交易量及交易额走势
+- [x] 使用 LSTM 和 ARIMA 实现价格走势预测
 - [ ] 使用 Flink 实现更丰富的实时计算
-- [ ] 使用 LSTM 和 ARIMA 实现价格走势预测
 - [ ] 通过数据分析构建一套投资策略
 
 
@@ -624,9 +620,10 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 ## 更新日志
 
 - v0.1 第一个版本
-	- 使用Flink完成数据清洗
-	- 使用Kafka消息队列传输数据
+	- 使用 Flink 完成数据清洗
+	- 使用 Kafka 消息队列传输数据
 	- 存入 Elasticsearch，使用全文检索实现实时搜索，kibana 可视化展示
 	- 使用 Flink 扩展拆分时间字段，实现一小时、一天、一周以及一月的价格和交易量走势可视化
-	- 使用Flink 流式实时分析价格、交易量及交易额走势
-  
+	- 使用 Flink 流式实时分析价格、交易量及交易额走势
+- v0.2 
+	- 使用传统统计方法价格预测雏形完成，还需要继续优化
