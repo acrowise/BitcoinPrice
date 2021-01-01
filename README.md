@@ -321,7 +321,7 @@ POST _reindex
 
 <center>图 4.3 Discover查看数据 </center>
 
-### 4.4 使用数据可视化
+### 4.4 数据可视化
 
 ![image-20210101005435254](image/image-20210101005435254.png)
 
