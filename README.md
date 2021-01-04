@@ -2,6 +2,10 @@
 
 ![52e920006bb3f7392d33b5db](image/logo.png)
 
+
+
+如果图片不能正常显示请移步码云地址：https://gitee.com/nanguatou9/BitcoinPrice
+
 ## 1 项目背景
 
 ### 1.1 比特币简介
@@ -147,7 +151,7 @@
 
 ### 4.2 字段映射(大坑)
 
-Flink 官方文档中上传到ES的数据类型都是String ，如果上传到 ES 的数据没有识别出时间字段，那么需要字段映射，否则不能进行时间查询操作！！！
+Flink 官方文档中上传到ES的数据类型都是String ，如果上传到 ES 的数据没有识别出时间字段，那么需要字段映射，否则不能进行时间查询操作，数值类型同理！！！
 
 Flink elasticsearch sink 官方文档：https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/dev/connectors/elasticsearch.html
 
