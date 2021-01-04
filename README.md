@@ -309,23 +309,23 @@ POST _reindex
 
 ![image-20210101001859177](image/image-20210101001859177.png)
 
-<center>图 4.1 创建索引模型</center>
+<p align="center">图 4.1 创建索引模型</p>
 
 ![image-20201231235736331](image/image-20201231235736331.png)
 
-<center>图 4.2 Discover </center>
+<p align="center">图 4.2 Discover </p>
 
 **使用 Discover 查看数据概况**
 
 ![image-20210101004954249](image/image-20210101004954249.png)
 
-<center>图 4.3 Discover查看数据 </center>
+<p align="center">图 4.3 Discover查看数据 </p>
 
 ### 4.4 数据可视化
 
 ![image-20210101005435254](image/image-20210101005435254.png)
 
-<center>图 4.4 数据可视化</center>
+<p align="center">图 4.4 数据可视化</p>
 
 以下可视化图片均由 Kibana 生成
 
@@ -335,13 +335,13 @@ POST _reindex
 
 ![image-20201225005709325](image/image-20201225005709325.png)
 
-<center>图 5.1 价格-交易量历史变化趋势</center>
+<p align="center">图 5.1 价格-交易量历史变化趋势</p>
 
 ### 5.2 价格-交易额历史变化趋势
 
 ![image-20201225005903614](image/image-20201225005903614.png)
 
-<center>图 5.2 价格-交易额历史变化趋势</center>
+<p align="center">图 5.2 价格-交易额历史变化趋势</p>
 
 ## 6 价格-交易量一小时内变化趋势
 
@@ -349,13 +349,13 @@ POST _reindex
 
 ![image-20201223140343138](image/image-20201223140343138.png)
 
-<center>图 6.1 不同年度一小时内价格-交易量变化趋势</center>
+<p align="center">图 6.1 不同年度一小时内价格-交易量变化趋势</p>
 
 图 6.2 是所有数据交易量-交易价格在不同**分钟刻度**的变化趋势。
 
 ![image-20201225003413437](image/image-20201225003413437.png)
 
-<center>图 6.2 全部数据一小时内价格-交易量变化趋势</center>
+<p align="center">图 6.2 全部数据一小时内价格-交易量变化趋势</p>
 
 ### 6.1 数据可信度分析
 
@@ -401,11 +401,11 @@ POST _reindex
 
 ![image-20201223181413577](image/image-20201223181413577.png)
 
-<center>图 7.1 不同年度一天内价格-交易量变化趋势</center>
+<p align="center">图 7.1 不同年度一天内价格-交易量变化趋势</p>
 
 ![image-20201225002948702](image/image-20201225002948702.png)
 
-<center>图 7.2 全部数据一天内价格-交易量变化趋势</center>
+<p align="center">图 7.2 全部数据一天内价格-交易量变化趋势</p>
 
 ### 7.3 交易量变化分析
 
@@ -443,11 +443,11 @@ POST _reindex
 
 ![image-20201224234114343](image/image-20201224234114343.png)
 
-<center>图 8.1 不同年度一周内价格-交易量变化趋势</center>
+<p align="center">图 8.1 不同年度一周内价格-交易量变化趋势</p>
 
 ![image-20201225012713471](image/image-20201225012713471.png)
 
-<center>图 8.2 全部数据一周内价格-交易量变化趋势</center>
+<p align="center">图 8.2 全部数据一周内价格-交易量变化趋势</p>
 
 ### 8.2 交易量变化分析
 
@@ -477,11 +477,11 @@ POST _reindex
 
 ![image-20201223183859368](image/image-20201223183859368.png)
 
-<center>图 9.1 不同年度一月内价格-交易量变化趋势</center>
+<p align="center">图 9.1 不同年度一月内价格-交易量变化趋势</p>
 
 ![image-20201225003207664](image/image-20201225003207664.png)
 
-<center>图 11 全部数据一月内价格-交易量变化趋势</center>
+<p align="center">图 11 全部数据一月内价格-交易量变化趋势</p>
 
 ### 9.2 交易量变化分析
 
