@@ -4,7 +4,7 @@
 
 
 
-如果图片不能正常显示请移步码云地址：https://gitee.com/nanguatou9/BitcoinPrice
+如果图片不能正常显示请移步码云地址：https://gitee.com/kailanyue/BitcoinPrice
 
 ## 1 项目背景
 
